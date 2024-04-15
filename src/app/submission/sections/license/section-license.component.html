@@ -1,0 +1,8 @@
+<pre class="d-flex license-text mb-4 px-3" [innerHTML]="licenseText$ | async"></pre>
+<ds-form *ngIf="formModel" #formRef="formComponent"
+         [formId]="formId"
+         [formModel]="formModel"
+         [formLayout]="formLayout"
+         [displaySubmit]="displaySubmit"
+         [displayCancel]="false"
+         (dfChange)="onChange($event)"></ds-form>
