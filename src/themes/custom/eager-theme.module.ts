@@ -46,6 +46,8 @@ import { ContextMenuModule } from '../../app/shared/context-menu/context-menu.mo
 import { MiradorViewerModule } from '../../app/item-page/mirador-viewer/mirador-viewer.module';
 import { AttachmentRenderingModule } from '../../app/cris-layout/cris-layout-matrix/cris-layout-box-container/boxes/metadata/rendering-types/advanced-attachment/bitstream-attachment/attachment-render/attachment-rendering.module';
 
+import { CountersSectionComponent } from './app/shared/explore/section-component/counters-section/counters-section.component';
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -85,6 +87,9 @@ const DECLARATIONS = [
   EditItemSelectorComponent,
   LogInComponent,
   LangSwitchComponent,
+
+  // Componentes propios
+  CountersSectionComponent,
 ];
 
 @NgModule({

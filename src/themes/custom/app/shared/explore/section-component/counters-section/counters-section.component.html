@@ -1,0 +1,52 @@
+<div
+  class="relative px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default max-w-6xl mx-auto"
+>
+  <div class="flex flex-wrap justify-center -m-4 text-center">
+    <ng-container *ngFor="let counter of counterData$ | async">
+      <ng-container *ngIf="counter.link; else countersSectionContent">
+        <a
+          *ngIf="internalLinkService.isLinkInternal(counter.link)"
+          [routerLink]="internalLinkService.getRelativePath(counter.link)"
+        >
+          <ng-container
+            *ngTemplateOutlet="countersSectionContent"
+          ></ng-container>
+        </a>
+        <a
+          *ngIf="!internalLinkService.isLinkInternal(counter.link)"
+          [href]="counter.link"
+          [target]="'_blank'"
+        >
+          <ng-container
+            *ngTemplateOutlet="countersSectionContent"
+          ></ng-container>
+        </a>
+      </ng-container>
+
+      <ng-template #countersSectionContent>
+        <div
+          class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center border-x"
+        >
+          <div class="flex items-center justify-center mx-auto text-indigo-700">
+            <div
+              class="font-heading text-indigo-700 text-[2.6rem] font-bold lg:text-5xl xl:text-6xl"
+            >
+              {{ counter.count }}
+            </div>
+            <div class="ml-2">
+              <span
+                class="w-6 h-6 m-0 fas aspect-square p-2 rounded-md bg-indigo-100"
+                [ngClass]="counter.icon.split(' ')[1]"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="text-sm font-medium uppercase tracking-widest text-gray-800 lg:text-base"
+          >
+            {{ "explore.counters-section." + counter.label | translate }}
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>

@@ -3324,15 +3324,15 @@
   "explore.browse-section.title": "Browse",
 
   // "explore.counters-section.rprofiles" : "People",
-  "explore.counters-section.rprofiles": "Talento Humano",
+  "explore.counters-section.rprofiles": "Miembros",
 
   // "explore.counters-section.publications" : "Research outputs",
   // TODO New key - Add a translation
-  "explore.counters-section.publications": "Research outputs",
+  "explore.counters-section.publications": "Investigaciones",
 
   // "explore.counters-section.project_funding" : "Projects",
   // TODO New key - Add a translation
-  "explore.counters-section.project_funding": "Projects",
+  "explore.counters-section.project_funding": "Proyectos",
 
   // "explore.facet-section.title" : "Discover",
   // TODO New key - Add a translation
