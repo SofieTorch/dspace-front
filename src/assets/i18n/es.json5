@@ -6041,11 +6041,11 @@
 
   // "menu.section.explore_publications": "Research Outputs",
   // TODO New key - Add a translation
-  "menu.section.explore_publications": "Resultados de investigación",
+  "menu.section.explore_publications": "Resultados",
 
   // "menu.section.explore_researchoutputs": "Research Outputs",
   // TODO New key - Add a translation
-  "menu.section.explore_researchoutputs": "Resultados de investigación",
+  "menu.section.explore_researchoutputs": "Resultados",
 
   // "menu.section.explore_researcherprofiles": "People",
   // TODO New key - Add a translation
@@ -6068,11 +6068,11 @@
 
   // "menu.section.explore_fundings_and_projects": "Fundings & Projects",
   // TODO New key - Add a translation
-  "menu.section.explore_fundings_and_projects": "Financiamientos y proyectos",
+  "menu.section.explore_fundings_and_projects": "Proyectos",
 
   // "menu.section.communities_and_collections": "Communities & Collections",
   // TODO New key - Add a translation
-  "menu.section.communities_and_collections": "Comunidades y colecciones",
+  "menu.section.communities_and_collections": "Comunidades",
 
   // "menu.section.control_panel": "Control Panel",
   "menu.section.control_panel": "Panel de control",
