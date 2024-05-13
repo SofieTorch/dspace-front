@@ -58,6 +58,10 @@
             [countersSection]="$any(sectionComponent)"
           ></ds-themed-counters-section>
 
+          <ds-themed-top-level-community-list
+            *ngSwitchCase="'counters'"
+          ></ds-themed-top-level-community-list>
+
           <ds-themed-text-section
             *ngSwitchCase="'text-row'"
             [sectionId]="sectionId"

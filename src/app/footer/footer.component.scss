@@ -3,21 +3,20 @@
     background-color: var(--ds-footer-bg);
     text-align: center;
     z-index: var(--ds-footer-z-index);
-    border-top: var(--ds-footer-border);
-    padding: var(--ds-footer-padding);
+  //   padding: var(--ds-footer-padding);
 
     p {
       margin: 0;
     }
 
-    div > img {
+    p > img {
       height: var(--ds-footer-logo-height);
     }
 
 
     .top-footer {
       background-color: var(--ds-top-footer-bg);
-      padding: var(--ds-footer-padding);
+      // padding: var(--ds-footer-padding);
       margin: calc(var(--ds-footer-padding) * -1);
     }
 

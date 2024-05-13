@@ -25,17 +25,17 @@
 
       <ng-template #countersSectionContent>
         <div
-          class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center border-x"
+          class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center border-x hover:bg-slate-100 rounded-md"
         >
           <div class="flex items-center justify-center mx-auto text-indigo-700">
             <div
-              class="font-heading text-indigo-700 text-[2.6rem] font-bold lg:text-5xl xl:text-6xl"
+              class="font-heading text-black text-[2.6rem] font-bold lg:text-5xl xl:text-6xl"
             >
               {{ counter.count }}
             </div>
             <div class="ml-2">
               <span
-                class="w-6 h-6 m-0 fas aspect-square p-2 rounded-md bg-indigo-100"
+                class="w-8 h-8 m-0 fas p-2 rounded-md bg-indigo-100"
                 [ngClass]="counter.icon.split(' ')[1]"
               ></span>
             </div>
