@@ -17,18 +17,20 @@ export class SearchOptions {
   fixedFilter?: string;
   projection?: string;
 
-  constructor(
-    options: {
-      configuration?: string, scope?: string, query?: string, dsoTypes?: DSpaceObjectType[], filters?: SearchFilter[],
-      fixedFilter?: string
-    }
-  ) {
-      this.configuration = options.configuration;
-      this.scope = options.scope;
-      this.query = options.query;
-      this.dsoTypes = options.dsoTypes;
-      this.filters = options.filters;
-      this.fixedFilter = options.fixedFilter;
+  constructor(options: {
+    configuration?: string;
+    scope?: string;
+    query?: string;
+    dsoTypes?: DSpaceObjectType[];
+    filters?: SearchFilter[];
+    fixedFilter?: string;
+  }) {
+    this.configuration = options.configuration;
+    this.scope = options.scope;
+    this.query = options.query;
+    this.dsoTypes = options.dsoTypes;
+    this.filters = options.filters;
+    this.fixedFilter = options.fixedFilter;
   }
 
   /**
@@ -40,6 +42,7 @@ export class SearchOptions {
   toRestUrl(url: string, args: string[] = []): string {
     if (isNotEmpty(this.configuration)) {
       args.push(`configuration=${encodeURIComponent(this.configuration)}`);
+      // args.push('embed=thumbnail');
     }
     if (isNotEmpty(this.fixedFilter)) {
       args.push(this.encodedFixedFilter);
@@ -58,8 +61,12 @@ export class SearchOptions {
     if (isNotEmpty(this.filters)) {
       this.filters.forEach((filter: SearchFilter) => {
         filter.values.forEach((value) => {
-          const filterValue = value.includes(',') ? `${value}` : value + (filter.operator ? ',' + filter.operator : '');
-          args.push(`${filter.key}=${this.encodeFilterQueryValue(filterValue)}`);
+          const filterValue = value.includes(',')
+            ? `${value}`
+            : value + (filter.operator ? ',' + filter.operator : '');
+          args.push(
+            `${filter.key}=${this.encodeFilterQueryValue(filterValue)}`
+          );
         });
       });
     }
